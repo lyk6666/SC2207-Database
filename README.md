@@ -1,2 +1,2 @@
 # SC2207-Database
-Lab Assignment Documents
+Lab5 Documents
