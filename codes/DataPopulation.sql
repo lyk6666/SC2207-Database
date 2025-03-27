@@ -77,7 +77,7 @@ INSERT INTO RISK_LEVEL_DETERMINATION (Q1Answer, Q2Answer, Q3Answer, Q4Answer, Q5
 
 INSERT INTO FINANCIAL_GOAL (Phone, Goal, Timeline, Amount) VALUES
 -- User 1: Children's education (long-term) + House purchase
-('81234567', 'To fund children’s education', 'By the time my child starts university in 2040', 120000.00),
+('81234567', 'To fund childrenï¿½s education', 'By the time my child starts university in 2040', 120000.00),
 ('81234567', 'To buy a house', 'Purchase within the next 10 years before 2034', 500000.00),
 
 -- User 2: Retirement planning
@@ -90,8 +90,8 @@ INSERT INTO FINANCIAL_GOAL (Phone, Goal, Timeline, Amount) VALUES
 -- User 4: House purchase goal
 ('84567890', 'To buy a house', 'Intend to buy property before starting a family in 2032', 450000.00),
 
--- User 5: Children’s education & Retirement
-('85678901', 'To fund children’s education', 'Saving to support tuition fees by 2045', 150000.00),
+-- User 5: Childrenï¿½s education & Retirement
+('85678901', 'To fund childrenï¿½s education', 'Saving to support tuition fees by 2045', 150000.00),
 ('85678901', 'To generate sufficient monthly cash after retirement', 'Aiming for passive income by 2048', 250000.00),
 
 -- User 6: Buying a car & Holiday vacations
@@ -101,8 +101,8 @@ INSERT INTO FINANCIAL_GOAL (Phone, Goal, Timeline, Amount) VALUES
 -- User 7: Starting a business
 ('87890123', 'To start a business', 'Launching a tech startup by 2030', 200000.00),
 
--- User 8: Children’s education & House purchase
-('88901234', 'To fund children’s education', 'Saving to pay tuition from 2038 to 2042', 180000.00),
+-- User 8: Childrenï¿½s education & House purchase
+('88901234', 'To fund childrenï¿½s education', 'Saving to pay tuition from 2038 to 2042', 180000.00),
 ('88901234', 'To buy a house', 'Intend to purchase a condo before 2035', 550000.00),
 
 -- User 9: Sole retirement goal
@@ -116,7 +116,7 @@ INSERT INTO FINANCIAL_GOAL (Phone, Goal, Timeline, Amount) VALUES
 ('81239876', 'To buy a luxury watch', 'Planning to purchase a Rolex in 2026', 50000.00),
 
 -- User 12: Children's education
-('82347654', 'To fund children’s education', 'Setting aside funds for school fees starting in 2035', 130000.00),
+('82347654', 'To fund childrenï¿½s education', 'Setting aside funds for school fees starting in 2035', 130000.00),
 
 -- User 13: House & Retirement planning
 ('83456543', 'To buy a house', 'Aim to purchase a home within the next 9 years', 400000.00),
@@ -126,7 +126,7 @@ INSERT INTO FINANCIAL_GOAL (Phone, Goal, Timeline, Amount) VALUES
 ('84565432', 'To buy a car', 'Looking to replace my current vehicle by 2029', 75000.00),
 
 -- User 15: Children's education + Vacations
-('85654321', 'To fund children’s education', 'Saving to support school expenses starting 2036', 160000.00),
+('85654321', 'To fund childrenï¿½s education', 'Saving to support school expenses starting 2036', 160000.00),
 ('85654321', 'To fund holiday vacations', 'Plan to travel every 3 years starting in 2027', 25000.00),
 
 -- User 16: Business startup goal
@@ -139,7 +139,7 @@ INSERT INTO FINANCIAL_GOAL (Phone, Goal, Timeline, Amount) VALUES
 ('88932098', 'To buy a house', 'Goal to buy a resale flat in 2031', 470000.00),
 
 -- User 19: Children's education & Buying a car
-('89921987', 'To fund children’s education', 'University tuition funding from 2037 onward', 140000.00),
+('89921987', 'To fund childrenï¿½s education', 'University tuition funding from 2037 onward', 140000.00),
 ('89921987', 'To buy a car', 'Purchasing a new SUV by 2026', 70000.00),
 
 -- User 20: Health-related expenses
@@ -1008,14 +1008,18 @@ INSERT INTO PORTFOLIO_STOCK_DETAILS (ID, StockID, Phone, PID, StartDate, Allocat
 
 (16, 2, '88901234', 2, '2023-03-15', 0.2),
 
-(17, 1, '89912345', 1, '2023-04-10', 0.5);
+(17, 1, '89912345', 1, '2023-04-10', 0.5),
+
+(27, 6, '83456543', 2,  '2023-3-20', 0.2);
 
 INSERT INTO PORTFOLIO_BOND_DETAILS (ID, BondID, Phone, PID, StartDate, AllocationRatio) VALUES
 (8, 14, '87890123', 1, '2023-05-20', 0.3),  -- 0.3 + 0.2 + 0.3 = 0.8 (rest in fund)
 
 (9, 11, '88901234', 1, '2023-03-08', 0.3),  -- 0.4 + 0.3 = 0.7
 
-(10, 13, '89912345', 1, '2023-04-15', 0.3);  -- 0.5 + 0.3 = 0.8
+(10, 13, '89912345', 1, '2023-04-15', 0.3),  -- 0.5 + 0.3 = 0.8
+
+(22, 12, '83456543', 2,  '2023-3-20', 0.3);
 
 INSERT INTO PORTFOLIO_FUND_DETAILS (ID, FundID, Phone, PID, StartDate, AllocationRatio) VALUES
 (9, 29, '87890123', 1, '2023-05-25', 0.2),  -- 0.3 + 0.2 + 0.3 + 0.2 = 1.0
@@ -1024,7 +1028,9 @@ INSERT INTO PORTFOLIO_FUND_DETAILS (ID, FundID, Phone, PID, StartDate, Allocatio
 
 (11, 22, '88901234', 2, '2023-03-20', 0.8), -- 0.2 + 0.8 = 1.0
 
-(12, 23, '89912345', 1, '2023-04-20', 0.2); -- 0.5 + 0.3 + 0.2 = 1.0
+(12, 23, '89912345', 1, '2023-04-20', 0.2), -- 0.5 + 0.3 + 0.2 = 1.0
+
+(27, 6, '83456543', 2,  '2023-3-20', 0.5); -- 0.2 + 0.3 + 0.5 = 1.0
 
 -- 16-20 Portfolios
 INSERT INTO PORTFOLIO_STOCK_DETAILS (ID, StockID, Phone, PID, StartDate, AllocationRatio) VALUES
